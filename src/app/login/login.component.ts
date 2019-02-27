@@ -17,9 +17,15 @@ export class LoginComponent implements OnInit {
     this.arr=[0,1,2,3];
     console.log(JSON.stringify(this.arr));
 
-    for(var i=0;i<=this.arr.length;i++){
-      console.log(this.arr[i]);
-    }
+    var i = 0;
+(function repeat(){
+  if (i++ > 100) return;
+  setTimeout(function(){
+    document.write(  i + "<br />");
+    repeat();
+  }, 2000);
+})();
+   
   }
 
 }
